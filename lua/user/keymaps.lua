@@ -71,9 +71,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
 
--- troubleshooting on wsl2
--- <c-v> out of effect
-keymap("n", "<c-V>", "<c-K>", opts)
 
 
 
