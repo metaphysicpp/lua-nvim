@@ -34,7 +34,7 @@ local options = {
   scrolloff = 8,                         -- 8 lines gap to bottom when brower down
   sidescrolloff = 8,
   termguicolors = true,
--- vim.opt.guifont = ""
+  guifont = "Hack NF",
 }
 
 vim.opt.shortmess:append"c"

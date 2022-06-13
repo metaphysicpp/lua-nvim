@@ -46,7 +46,8 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
   -- Colorschemes
-  use 'folke/tokyonight.nvim' -- A clean, dark Neovim theme written in Lua
+  use "LunarVim/darkplus.nvim"
+  use "folke/tokyonight.nvim" -- A clean, dark Neovim theme written in Lua
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
