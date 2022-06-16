@@ -3,12 +3,8 @@
 
 using std::vector;
 
-int main (int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     vector<int> vec;
-    
+
     return 0;
-
 }
-
-
