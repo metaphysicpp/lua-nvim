@@ -1,0 +1,81 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.004  000.004: --- NVIM STARTING ---
+000.192  000.188: locale set
+000.383  000.191: inits 1
+000.390  000.006: window checked
+000.417  000.028: parsing arguments
+000.842  000.425: init lua interpreter
+000.955  000.113: expanding arguments
+000.993  000.038: inits 2
+001.297  000.304: init highlight
+001.298  000.001: waiting for UI
+002.313  001.014: done waiting for UI
+002.330  000.017: init screen for UI
+002.376  000.046: init default mappings
+002.457  000.081: init default autocommands
+003.147  000.058  000.058: sourcing /usr/share/nvim/runtime/ftplugin.vim
+003.244  000.018  000.018: sourcing /usr/share/nvim/runtime/indent.vim
+009.737  003.435  003.435: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/darkplus.nvim/colors/darkplus.vim
+099.781  096.502  093.067: sourcing /home/metaphysic/.config/nvim/init.lua
+099.796  000.762: sourcing vimrc file(s)
+099.946  000.021  000.021: sourcing /usr/share/nvim/runtime/filetype.lua
+104.738  000.009  000.009: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/LuaSnip/ftdetect/snippets.vim
+105.045  005.092  005.083: sourcing /usr/share/nvim/runtime/filetype.vim
+105.256  000.061  000.061: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+105.357  000.259  000.198: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+105.927  000.167  000.167: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+105.940  000.006  000.006: sourcing /usr/share/nvim/runtime/plugin/health.vim
+106.005  000.060  000.060: sourcing /usr/share/nvim/runtime/plugin/man.vim
+106.284  000.153  000.153: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+106.327  000.315  000.162: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+106.436  000.103  000.103: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+106.471  000.025  000.025: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+106.595  000.006  000.006: sourcing /home/metaphysic/.local/share/nvim/rplugin.vim
+106.600  000.124  000.118: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+106.708  000.096  000.096: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+106.731  000.014  000.014: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+106.832  000.094  000.094: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+106.888  000.048  000.048: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+106.903  000.009  000.009: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+107.033  000.122  000.122: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+107.268  000.192  000.192: sourcing /home/metaphysic/.config/nvim/plugin/packer_compiled.lua
+107.349  000.805: loading rtp plugins
+107.730  000.203  000.203: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim
+108.376  000.364  000.364: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/nvim-cmp/plugin/cmp.lua
+108.485  000.070  000.070: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer/plugin/nvim-lsp-installer.vim
+108.586  000.054  000.054: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+109.123  000.469  000.469: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.lua
+109.266  000.099  000.099: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring/plugin/ts_context_commentstring.vim
+109.338  000.026  000.026: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+109.414  000.023  000.023: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+109.596  000.107  000.107: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.lua
+109.684  000.044  000.044: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/vim-bbye/plugin/bbye.vim
+109.748  000.937: loading packages
+110.540  000.084  000.084: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/Comment.nvim/after/plugin/Comment.lua
+110.775  000.209  000.209: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/cmp-buffer/after/plugin/cmp_buffer.lua
+110.882  000.077  000.077: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/cmp-cmdline/after/plugin/cmp_cmdline.lua
+111.020  000.106  000.106: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp/after/plugin/cmp_nvim_lsp.lua
+111.126  000.069  000.069: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua/after/plugin/cmp_nvim_lua.lua
+111.247  000.088  000.088: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/cmp-path/after/plugin/cmp_path.lua
+111.421  000.139  000.139: sourcing /home/metaphysic/.local/share/nvim/site/pack/packer/start/cmp_luasnip/after/plugin/cmp_luasnip.lua
+111.425  000.906: loading after plugins
+111.435  000.011: inits 3
+113.432  001.996: reading ShaDa
+116.078  000.057  000.057: sourcing /usr/share/nvim/runtime/ftplugin/lua.vim
+116.975  000.030  000.030: sourcing /usr/share/nvim/runtime/indent/lua.vim
+119.796  000.671  000.671: sourcing /usr/share/nvim/runtime/syntax/lua.vim
+124.108  000.536  000.536: sourcing /usr/share/nvim/runtime/syntax/lua.vim
+125.450  010.725: opening buffers
+126.546  001.095: BufEnter autocommands
+126.552  000.007: editing files in windows
+126.961  000.408: VimEnter autocommands
+126.965  000.004: UIEnter autocommands
+146.125  019.043  019.043: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+146.141  000.133: before starting main loop
+150.417  004.276: first screen update
+150.421  000.004: --- NVIM STARTED ---

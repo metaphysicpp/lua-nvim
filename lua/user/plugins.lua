@@ -50,8 +50,10 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
-  use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
+  use "nvim-lualine/lualine.nvim"  -- statusline
+  use "akinsho/toggleterm.nvim" -- A terminal in neovim
+  use "lewis6991/impatient.nvim" -- Speed up loading Lua modules in Neovim to improve startup time
+  use "lukas-reineke/indent-blankline.nvim" -- adds indentation guide to all lines
 
   -- Colorschemes
   use "LunarVim/darkplus.nvim"
