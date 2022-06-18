@@ -57,7 +57,8 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "LunarVim/darkplus.nvim"
-  -- use "folke/tokyonight.nvim" -- A clean, dark Neovim theme written in Lua
+  use "folke/tokyonight.nvim" -- A clean, dark Neovim theme written in Lua
+  use {"catppuccin/nvim", as = "catppuccin"}
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -93,10 +94,15 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
 
+  -- Autosave
+  use "Pocco81/AutoSave.nvim"
+
+  -- Alpha - a fully customizable greeter for neovim
+  use "goolord/alpha-nvim"
 
 
-
-
+  -- Which-Key
+  use "folke/which-key.nvim"
 
 
 
