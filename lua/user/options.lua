@@ -18,7 +18,7 @@ local options = {
   splitbelow = true,                     -- horizontal splits to go below current window
   splitright = true,                     -- vertical splits to go the right of current window
   swapfile = false,                      -- creat a swap file
-  timeoutlen = 1000,                     -- time to wait for a mapped sequence to complete(in milliseconds)
+  timeoutlen = 500,                     -- time to wait for a mapped sequence to complete(in milliseconds)
   undofile = true,                       -- enable persister undofile
   updatetime = 300,                      -- faster completion (4000ms default)
   writebackup = false,                   -- if a file is being edited by another program, it is not allowed to be edited
@@ -35,6 +35,8 @@ local options = {
   sidescrolloff = 8,
   termguicolors = true,
   guifont = "Hack NF",
+  autoindent = true,
+  cindent = true,
 }
 
 vim.opt.shortmess:append"c"
@@ -45,3 +47,22 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
+
+-- WSL yank support
+vim.cmd [[
+let s:clip = '/mnt/c/Windows/System32/clip.exe' 
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
+]]
+
+
+
+
+
+
+
+
