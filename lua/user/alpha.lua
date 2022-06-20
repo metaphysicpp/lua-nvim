@@ -28,7 +28,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "powerde by github@metaphysicpp"
+	return "powered by github@metaphysicpp"
 end
 
 dashboard.section.footer.val = footer()

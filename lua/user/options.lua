@@ -33,10 +33,10 @@ local options = {
   wrap = false,                          -- display lines as one long lines
   scrolloff = 8,                         -- 8 lines gap to bottom when brower down
   sidescrolloff = 8,
-  termguicolors = true,
   guifont = "Hack NF",
   autoindent = true,
   cindent = true,
+  termguicolors = true,
 }
 
 vim.opt.shortmess:append"c"
@@ -58,11 +58,3 @@ if executable(s:clip)
     augroup END
 endif
 ]]
-
-
-
-
-
-
-
-

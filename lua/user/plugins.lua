@@ -56,9 +56,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim" -- adds indentation guide to all lines
 
   -- Colorschemes
-  use "LunarVim/darkplus.nvim"
-  use "folke/tokyonight.nvim" -- A clean, dark Neovim theme written in Lua
-  use {"catppuccin/nvim", as = "catppuccin"}
+  use "shaunsingh/nord.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
