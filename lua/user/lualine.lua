@@ -37,9 +37,10 @@ local conditions = {
 local config = {
   options = {
     -- Disable sections and component separators
+    icons_enabled = true,
     component_separators = '',
     section_separators = '',
-    disable_filetypes = {"NvimTree"},
+    disable_filetypes = {"NvimTree", "alpha"},
     theme = {
       -- We are going to use lualine_c an lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we
@@ -47,6 +48,7 @@ local config = {
       normal = { c = { fg = colors.fg, bg = colors.bg } },
       inactive = { c = { fg = colors.fg, bg = colors.bg } },
     },
+    always_divide_middle = true,
   },
   sections = {
     -- these are to remove the defaults
@@ -74,7 +76,7 @@ local function ins_left(component)
   table.insert(config.sections.lualine_c, component)
 end
 
--- Inserts a component in lualine_x ot right section
+-- Inserts a component in lualine_x at right section
 local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
@@ -133,12 +135,22 @@ ins_left {
 
 ins_left { 'location' }
 
-ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
+-- cool function for progress
+local progress = function()
+	local current_line = vim.fn.line(".")
+	local total_lines = vim.fn.line("$")
+	local chars = { "🌕", "🌖", "🌖", "🌗", "🌗", "🌘", "🌘", "🌑"}
+	local line_ratio = current_line / total_lines
+	local index = math.ceil(line_ratio * #chars)
+	return chars[index]
+end
+
+ins_left { progress, color = { fg = colors.fg, gui = 'bold' } }
 
 ins_left {
   'diagnostics',
   sources = { 'nvim_diagnostic' },
-  symbols = { error = ' ', warn = ' ', info = ' ' },
+  symbols = { error = ' ', warn = ' ', info = ' ' },
   diagnostics_color = {
     color_error = { fg = colors.red },
     color_warn = { fg = colors.yellow },
@@ -172,22 +184,26 @@ ins_left {
     return msg
   end,
   icon = ' LSP:',
-  color = { fg = '#ffffff', gui = 'bold' },
+  color = { fg = '#900C3F', gui = 'bold' },
 }
 
 -- Add components to right sections
 ins_right {
   'o:encoding', -- option component same as &encoding in viml
-  fmt = string.upper, -- I'm not sure why it's upper case either ;)
+  -- fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = colors.green, gui = 'bold' },
+  color = { fg = colors.cyan, gui = 'bold' },
 }
 
+local spaces = function()
+	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
+end
+
 ins_right {
-  'fileformat',
-  fmt = string.upper,
+  spaces,
+  -- fmt = string.upper,
   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.green, gui = 'bold' },
+  color = { fg = colors.yellow, gui = 'bold' },
 }
 
 ins_right {

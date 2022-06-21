@@ -20,7 +20,7 @@ local options = {
   swapfile = false,                      -- creat a swap file
   timeoutlen = 500,                     -- time to wait for a mapped sequence to complete(in milliseconds)
   undofile = true,                       -- enable persister undofile
-  updatetime = 300,                      -- faster completion (4000ms default)
+  updatetime = 250,                      -- faster completion (4000ms default)
   writebackup = false,                   -- if a file is being edited by another program, it is not allowed to be edited
   expandtab = true,                      -- convert tabs to spaces
   shiftwidth = 2,                        -- the number of spaces inserted for each indentation
@@ -37,6 +37,7 @@ local options = {
   autoindent = true,
   cindent = true,
   termguicolors = true,
+  smarttab = true,
 }
 
 vim.opt.shortmess:append"c"
@@ -47,6 +48,8 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
+vim.cmd "set cinoptions=g0,:0,N-s,(0"
+
 
 -- WSL yank support
 vim.cmd [[
