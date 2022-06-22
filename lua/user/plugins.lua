@@ -38,6 +38,8 @@ packer.init {
   },
 }
 
+pcall(require, "impatient") --run :LuaCacheClear
+
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
@@ -47,13 +49,22 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
+  use {"kyazdani42/nvim-tree.lua",
+        config = function ()
+          require("user.nvim-tree")
+        end,
+        cmd = { 'NvimTreeOpen', 'NvimTreeToggle' },
+        after = { "nvim-web-devicons" },
+      }
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
-  use "nvim-lualine/lualine.nvim"  -- statusline
+  use {"nvim-lualine/lualine.nvim",  -- statusline
+        after = { "nvim-web-devicons", "gitsigns.nvim"},
+      }
   use "akinsho/toggleterm.nvim" -- A terminal in neovim
   use "lewis6991/impatient.nvim" -- Speed up loading Lua modules in Neovim to improve startup time
   use "lukas-reineke/indent-blankline.nvim" -- adds indentation guide to all lines
+  use "dstein64/vim-startuptime" -- profiling Nvim's startuptime
 
   -- Colorschemes
   use "shaunsingh/nord.nvim"
@@ -73,7 +84,9 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use {"williamboman/nvim-lsp-installer", -- simple to use language server installer
+        event = { "InsertEnter", "CursorMoved"}
+      }
   -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
@@ -89,7 +102,9 @@ return packer.startup(function(use)
 
 
   -- Git
-  use "lewis6991/gitsigns.nvim"
+  use {"lewis6991/gitsigns.nvim", -- git commit sign
+        event = { "BufRead", "BufNewFile" },
+      }
 
 
   -- Autosave
@@ -101,7 +116,6 @@ return packer.startup(function(use)
 
   -- Which-Key
   use "folke/which-key.nvim"
-
 
 
 

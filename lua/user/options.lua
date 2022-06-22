@@ -14,30 +14,34 @@ local options = {
   showmode = false,                      -- don't show like -- INSERT -- anymore
   showtabline = 2,                       -- always show tabs
   smartcase = true,                      -- smart case
-  smartindent = true,                    -- make indenting smarter again
   splitbelow = true,                     -- horizontal splits to go below current window
   splitright = true,                     -- vertical splits to go the right of current window
   swapfile = false,                      -- creat a swap file
   timeoutlen = 500,                     -- time to wait for a mapped sequence to complete(in milliseconds)
   undofile = true,                       -- enable persister undofile
-  updatetime = 250,                      -- faster completion (4000ms default)
+  updatetime = 100,                      -- faster completion (4000ms default)
   writebackup = false,                   -- if a file is being edited by another program, it is not allowed to be edited
   expandtab = true,                      -- convert tabs to spaces
-  shiftwidth = 2,                        -- the number of spaces inserted for each indentation
-  tabstop = 2,                           -- insert 4 spaces for a tab
+  shiftwidth = 4,                        -- the number of spaces inserted for each indentation
+  tabstop = 8,                           -- insert 4 spaces for a tab
   cursorline = true,                     -- highlight the current line
   number = true,                         -- set numbered lines
   relativenumber = true,                 -- set relative numbered lines
-  numberwidth = 2,                       -- set number column width to 2 (default 4)
   signcolumn = "yes",                    -- always show the sign column, otherwise it would shift the text each time
   wrap = false,                          -- display lines as one long lines
   scrolloff = 8,                         -- 8 lines gap to bottom when brower down
   sidescrolloff = 8,
   guifont = "Hack NF",
-  autoindent = true,
-  cindent = true,
   termguicolors = true,
   smarttab = true,
+  laststatus = 3,
+  filetype = "plugin",
+  showcmd = true,
+  numberwidth = 2,
+  list = true,
+  listchars = "eol:↴",
+  autoindent = true,
+  smartindent = true,
 }
 
 vim.opt.shortmess:append"c"
@@ -48,7 +52,9 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
-vim.cmd "set cinoptions=g0,:0,N-s,(0"
+vim.cmd "set cindent"
+vim.cmd "set cinoptions=g0,i0,N-s"
+
 
 
 -- WSL yank support

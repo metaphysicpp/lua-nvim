@@ -1,14 +1,11 @@
+#include <ios>
 #include <iostream>
+#include <locale>
+#include <sys/types.h>
 #include <vector>
 
-using std::vector;
-class myClass{
 
-};
 
-int main(int argc, char *argv[]) {
-    vector<int> vec[10];
-    int arr[10];
 
-    return 0;
-}
+
+
