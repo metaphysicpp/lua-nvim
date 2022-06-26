@@ -99,10 +99,10 @@ function PrintDiagnostics(opts, bufnr, line_nr)
   vim.api.nvim_echo({{diagnostic_message, "Normal"}}, false, {})
 end
 
---vim.cmd [[ autocmd! CursorHold * lua PrintDiagnostics() ]]
+-- vim.cmd [[ autocmd! CursorHold * lua PrintDiagnostics() ]]
 
 -- Show line diagnostics automatically in hover window
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
+-- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
 
 
 M.on_attach = function(client, bufnr)

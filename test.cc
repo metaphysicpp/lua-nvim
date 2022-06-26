@@ -1,11 +1,11 @@
-#include <ios>
-#include <iostream>
-#include <locale>
-#include <sys/types.h>
 #include <vector>
 
 
-
+int main (int argc, char *argv[])
+{
+    std::cout    
+    return 0;
+}
 
 
 
