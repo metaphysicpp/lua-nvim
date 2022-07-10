@@ -117,7 +117,8 @@ return packer.startup(function(use)
   -- Which-Key
   use "folke/which-key.nvim"
 
-
+  -- Markdown preview
+  use "iamcco/markdown-preview.nvim"
 
 
 

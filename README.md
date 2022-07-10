@@ -4,7 +4,6 @@
 
 ### Preface
 
-> Neovim = 0.8.0 
 
 learn to how to config Neovim by Lua
 
@@ -48,6 +47,105 @@ noremap <expr>0 col('.') == 1 ? '^' : '0'
 这里就是用了一个条件表达式，当前列是第一列时，0键被映射成^ 键；当不在第一列时，还是0键。
 
 更多用法可以使用`:help map`,或者参考[这里](https://zhuanlan.zhihu.com/p/38150203)
+
+### 必要依赖
+
+> Neovim = 0.8.0 
+
+1.必要的二进制程序：
+
+> unzip、nodejs、npm、xsel(为了把vim剪贴板和系统剪切板同步)
+> 
+> curl、wget 等用于下载文件的程序
+
+2.用你的Linux发行版所带的包管理器下载，例如：apt、pacman、yum
+
+3.魔法上网
+
+
+### 插件列表
+
+
+  packer.nvim" 
+  popup.nvim" 
+  plenary.nvim" 
+  nvim-autopairs" 
+  Comment.nvim" 
+  nvim-web-devicons"
+  nvim-tree.lua",
+  bufferline.nvim"
+  vim-bbye"
+  lualine.nvim"
+  toggleterm.nvim" 
+  impatient.nvim" 
+  indent-blankline.nvim" 
+  vim-startuptime" 
+
+  nord.nvim"
+
+  -- cmp plugins
+  nvim-cmp"  
+  cmp-buffer" 
+  cmp-path"  
+  cmp-cmdline" 
+  cmp_luasnip" 
+  cmp-nvim-lsp"
+  cmp-nvim-lua"
+
+  -- snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use {"williamboman/nvim-lsp-installer", -- simple to use language server installer
+        event = { "InsertEnter", "CursorMoved"}
+      }
+  -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use 'nvim-telescope/telescope-media-files.nvim'
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+
+
+  -- Git
+  use {"lewis6991/gitsigns.nvim", -- git commit sign
+        event = { "BufRead", "BufNewFile" },
+      }
+
+
+  -- Autosave
+  use "Pocco81/AutoSave.nvim"
+
+  -- Alpha - a fully customizable greeter for neovim
+  use "goolord/alpha-nvim"
+
+
+  -- Which-Key
+  use "folke/which-key.nvim"
+
+  -- Markdown preview
+  use "iamcco/markdown-preview.nvim"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
